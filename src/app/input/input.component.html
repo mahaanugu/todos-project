@@ -1,0 +1,39 @@
+<div>
+    <!-- <input (change)="OnChange($event)" > -->
+    <button (click)="OnClick()">GetData</button>
+</div>
+<!-- 
+<div> {{ response | json }} </div> -->
+
+<table>
+    <tr>
+        <th *ngFor = "let column of headers">
+            <div *ngIf="show">{{column}}</div>
+        </th>
+    </tr>
+    <tr *ngFor = "let row of response">
+        <td *ngFor = "let column of headers">
+          {{ row[column] }}
+        </td>
+    </tr>
+</table>
+
+<!-- <table>
+    <thead>
+        <tr>
+            <th>userId</th>
+            <th>id</th>
+            <th>title</th>
+            <th>completed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of response">
+            <td>{{row.userId}}</td>
+            <td>{{row.id}}</td>
+            <td>{{row.title}}</td>
+            <td>{{row.completed}}</td>
+        </tr>
+    </tbody>
+</table> -->
+
